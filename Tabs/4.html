@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+    <div class="items-center px-8 mx-auto max-w-7xl lg:px-16 md:px-12">
+        <div class="justify-center w-full lg:p-10 max-auto">
+            <div x-data="{ tab: 'tab1' }">
+                <ul class="grid grid-cols-3 mx-auto text-sm text-center text-black border-b">
+                    <li class="w-full -mb-px">
+                        <!-- event handler set state to 'tab1' and add conditional :class for active state -->
+                        <a :class="{ ' bg-white text-blue-500  border-blue-500' : tab === 'tab1' }" @click.prevent="tab = 'tab1'"
+                           class="inline-block py-2 font-medium ´ border-b-2 px-6 w-full border-transaprent"
+                           href="#">
+                            Buttons
+                        </a>
+                    </li>
+                    <li class="w-full -mb-px">
+                        <a :class="{ ' bg-white text-blue-500  border-blue-500' : tab === 'tab2' }" @click.prevent="tab = 'tab2'"
+                           class="inline-block py-2 font-medium ´ border-b-2 px-6 w-full border-transaprent"
+                           href="#">
+                            Check Boxes
+                        </a>
+                    </li>
+                    <li class="w-full -mb-px">
+                        <a :class="{ ' bg-white text-blue-500  border-blue-500' : tab === 'tab3' }" @click.prevent="tab = 'tab3'"
+                           class="inline-block py-2 font-medium ´ border-b-2 px-6 w-full border-transaprent bg-white text-blue-500 border-blue-500"
+                           href="#">
+                            Inputs
+                        </a>
+                    </li>
+                </ul>
+                <div class="py-4 pt-4 text-left bg-white content">
+                    <!-- show tab1 only -->
+                    <div class="text-gray-500" style="display: none;" x-show="tab==='tab1'">
+                        <main>
+                            <!-- === Remove and replace with your own content... === -->
+                            <div class="py-4">
+                              <span class="inline-flex items-center text-black">
+                                <span aria-hidden="true" class="font-mono text-sm">
+                                  01
+                                </span>
+                                <span class="ml-3 h-3.5 w-px bg-black"></span>
+                                <span class="ml-3 text-base font-medium tracking-tight">
+                                  Tab content
+                                </span>
+                              </span>
+                                <div class="h-32 border border-gray-200 border-dashed rounded-lg"></div>
+                            </div>
+                            <!-- === End ===  -->
+                        </main>
+                    </div>
+                    <div class="text-gray-500" style="display: none;" x-show="tab==='tab2'">
+                        <main>
+                            <!-- === Remove and replace with your own content... === -->
+                            <div class="py-4">
+                              <span class="inline-flex items-center text-black">
+                                <span aria-hidden="true" class="font-mono text-sm">
+                                  02
+                                </span>
+                                <span class="ml-3 h-3.5 w-px bg-black"></span>
+                                <span class="ml-3 text-base font-medium tracking-tight">
+                                  Tab content
+                                </span>
+                              </span>
+                                <div class="h-32 border border-gray-200 border-dashed rounded-lg"></div>
+                            </div>
+                            <!-- === End ===  -->
+                        </main>
+                    </div>
+                    <div class="text-gray-500" x-show="tab==='tab3'">
+                        <main>
+                            <!-- === Remove and replace with your own content... === -->
+                            <div class="py-4">
+                              <span class="inline-flex items-center text-black">
+                                <span aria-hidden="true" class="font-mono text-sm">
+                                  03
+                                </span>
+                                <span class="ml-3 h-3.5 w-px bg-black"></span>
+                                <span class="ml-3 text-base font-medium tracking-tight">
+                                  Tab content
+                                </span>
+                              </span>
+                                <div class="h-32 border border-gray-200 border-dashed rounded-lg"></div>
+                            </div>
+                            <!-- === End ===  -->
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
